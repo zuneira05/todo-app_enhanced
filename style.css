@@ -1,0 +1,114 @@
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family:'Segoe UI', sans-serif;
+}
+
+body{
+    background:#DCD6C3;
+}
+
+.container{
+    width:100%;
+    min-height:100vh;
+    display:flex;
+    align-items:center;
+    justify-content:center;
+}
+
+.todo-app{
+    width:100%;
+    max-width:600px;
+    background:#F5F1EA;
+    padding:30px;
+    border-radius:20px;
+    box-shadow:0 8px 20px rgba(0,0,0,0.1);
+}
+
+h2{
+    text-align: center;
+    margin-bottom:20px;
+    color:#4E5F4D;
+}
+
+/* INPUT ROW */
+.row{
+    display:flex;
+    flex-wrap:wrap;
+    gap:10px;
+    margin-bottom:20px;
+}
+
+input{
+    flex:1;
+    padding:10px;
+    border-radius:10px;
+    border:1px solid #ccc;
+}
+
+button{
+    padding:10px 20px;
+    background:#6F826A; /* updated green */
+    color:white;
+    border:none;
+    border-radius:10px;
+    cursor:pointer;
+}
+
+button:hover{
+    background:#4E5F4D;
+}
+
+/* TASK */
+ul li{
+    display:flex;
+    align-items:center;
+    gap:10px;
+    background:white;
+    padding:12px 12px 12px 45px;
+    border-radius:10px;
+    margin-bottom:10px;
+    position:relative;
+}
+
+/* circle */
+ul li::before{
+    content:'';
+    position:absolute;
+    left:10px;
+    top:50%;
+    transform:translateY(-50%);
+    width:20px;
+    height:20px;
+    border-radius:50%;
+    background:#ccc;
+}
+
+/* completed */
+ul li.checked{
+    text-decoration:line-through;
+    color:gray;
+}
+
+/* green circle */
+ul li.checked::before{
+    background:#6F826A;
+}
+
+/* text */
+.task-text{
+    flex:1;
+    cursor:pointer;
+}
+
+/* delete */
+.delete-btn{
+    font-size:20px;
+    cursor:pointer;
+    color:#555;
+}
+
+.delete-btn:hover{
+    color:rgb(156, 114, 114);
+}
